@@ -1,0 +1,66 @@
+### read all users
+ GET http://localhost:4000/user-api/users
+
+### read user by objectId
+GET http://localhost:4000/user-api/users/697dbb793e5fd1565db43e7a
+
+### create user
+POST http://localhost:4000/user-api/users/
+Content-Type: application/json
+
+{
+  "username":"mike",
+  "password":"will",
+  "age":20
+}
+
+###upadte user
+PUT http://localhost:4000/user-api/users/697dba57881c94e68c4d3033
+Content-Type: application/json
+
+{
+  "username":"vinitha",
+  "password":"chowdary",
+  "age":21
+}
+
+### delete user by objectId
+DELETE http://localhost:4000/user-api/users/697dc917712c02456930f140
+
+###read all products
+GET http://localhost:4000/products-api/products
+
+###create user
+POST http://localhost:4000/products-api/products
+Content-Type: application/json
+
+{
+  "productId":103,
+  "productName":"keyboard",
+  "brand":"dell"
+}
+
+###read user object id
+GET http://localhost:4000/products-api/products/697dd07c58876bc40b651bd0
+
+### upadte user by id
+PUT http://localhost:4000/products-api/products/697dd07c58876bc40b651bd0
+Content-Type: application/json
+
+{
+  "productId":105,
+   "productName":"connecting wire",
+  "brand":"sony"
+}
+
+### user authentication (login re)
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+  "username":"mike",
+  "password":"will"
+}
+
+###req for protected route
+GET http://localhost:4000/user-api/test
